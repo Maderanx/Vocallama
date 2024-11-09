@@ -1,0 +1,237 @@
+:root {
+  --primary-color: #00e5ff;
+  --background-color: #000000;
+  --text-color: #f5f5f5;
+  --secondary-text-color: #ccc;
+  --input-background-color: #333;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem;
+  background-color: var(--background-color);
+  text-align: center;
+}
+
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--secondary-text-color);
+  margin-bottom: 2rem;
+}
+
+
+.input-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.prompt-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  background-color: var(--input-background-color);
+  color: var(--primary-color);
+}
+
+.send-button {
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.send-button:hover {
+  background-color: #00ccba;
+}
+
+
+.response-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 90%;
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  color: var(--secondary-text-color);
+  text-align: center;
+}
+
+.siriwave-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  width: 100%;
+  max-width: 200px; 
+  height: 50px;
+  overflow: hidden; 
+  background-color: var(--background-color); 
+}
+
+
+.loading-animation {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.siri-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.siri-dots div {
+  width: 12px;
+  height: 12px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  animation: siri-wave 0.8s infinite alternate;
+}
+
+.siri-dots div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.siri-dots div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.siri-dots div:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+@keyframes siri-wave {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+
+/*Laptop*/
+@media (min-width: 768px) {
+  .app-container {
+    max-width: 700px;
+    padding: 3rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1.75rem;
+  }
+
+  .prompt-input {
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+  }
+
+  .send-button {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .response-container {
+    max-width: 80%;
+    font-size: 1.5rem;
+  }
+
+  .siriwave-animation {
+    width: 100px;
+    height: 60px;
+  }
+}
+
+/*Phone*/
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+  }
+
+  .prompt-input {
+    font-size: 0.9rem;
+    width: 90%;
+  }
+
+  .send-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .response-container {
+    flex-direction: column;
+    font-size: 1.2rem;
+  }
+
+  .siriwave-animation {
+    max-width: 90px;
+    height: 40px;
+  }
+}
+
+.logo-image {
+  width: 300px; 
+  height: auto;
+  margin-bottom: 1rem; 
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .logo-image {
+    width: 500px; 
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+}
