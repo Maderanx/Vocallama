@@ -1,5 +1,5 @@
 # Vocallama: AI Assistant 
-# Who needs Internet? Not YOU
+## Who needs Internet? Not YOU
 
 This project is an offline voice-controlled system for home automation, combining an ESP32 microcontroller, a Raspberry Pi running a Flask server, and a React front end. The setup enables voice-controlled LED lighting that is responsive to natural language commands without requiring an internet connection.
 
